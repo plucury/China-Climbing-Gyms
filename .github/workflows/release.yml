@@ -23,4 +23,4 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
-          tag: ${{ steps.date.outputs.date }}-${{ env.GITHUB_SHA }}
+          tag: ${{ steps.date.outputs.date }}-${{ github.sha }}
