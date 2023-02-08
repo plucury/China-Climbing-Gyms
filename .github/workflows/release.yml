@@ -27,3 +27,4 @@ jobs:
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
           tag: ${{ steps.date.outputs.date }}-${{ github.sha }}
+          artifacts: "gyms.json"
