@@ -8,6 +8,9 @@ jobs:
   Release:
     runs-on: ubuntu-latest
     steps:
+      - name: Set current date 
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
@@ -20,4 +23,4 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
-          artifacts: gyms.json
+          tag: ${{ steps.date.outputs.date }}-${{GITHUB_SHA}}
