@@ -1,5 +1,4 @@
 .vscode
 .python-version
 
-csv_to_yaml.py
-gyms.csv
+gyms.json
