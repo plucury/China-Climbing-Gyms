@@ -22,6 +22,8 @@ if __name__ == '__main__':
         city_dict[city]['gyms'].append(gym)
     citys = sorted(city_dict.values(),
                    key=lambda x: x['province']+":"+x['city'])
+    for city in citys:
+        city['gyms'].sort(key=lambda x: x['name'])
 
     with open('gyms.json', 'w') as f:
         json.dump(citys, f, indent=4)
