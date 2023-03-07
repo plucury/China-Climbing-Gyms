@@ -1,0 +1,23 @@
+
+typs: "obejct"
+properties:
+    name:
+        type: "string"
+    province:
+        type: "string"
+    city:
+        type: "string"
+    address:
+        type: "string"
+    phone:
+        type: "string"
+    wechat_official_account:
+        type: "string"
+    opening_hours:
+        type: "string"
+required:
+    - name
+    - province
+    - city
+    - address
+additionalProperties: false

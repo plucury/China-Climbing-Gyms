@@ -1,0 +1,4 @@
+[project]
+dependencies = [
+  'yamale==4.0.4',
+]
