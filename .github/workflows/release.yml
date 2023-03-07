@@ -1,8 +1,9 @@
 name: Release
 
 on:
-  push:
-    branches: [push, pull_request]
+  workflow_run:
+    branches: [main]
+    workflows: ["Validate"]
 
 permissions:
   contents: write

@@ -1,8 +1,6 @@
-name: Release
+name: Validate
 
-on:
-  push:
-    branches: [main]
+on: [push, pull_request]
 
 permissions:
   contents: read
