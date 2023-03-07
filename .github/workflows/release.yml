@@ -4,6 +4,8 @@ on:
   workflow_run:
     branches: [main]
     workflows: ["Validate"]
+    types:
+      - completed
 
 permissions:
   contents: write
